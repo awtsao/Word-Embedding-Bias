@@ -54,7 +54,7 @@ def compute_manzini_bias(attribute_embeddings, neutral_embeddings, A_list):
 	for w, e in neutral_embeddings.items():
 		neutral_bias.append(abs(sum([(1 - spatial.distance.cosine(e, ai)) for ai in a_list]) / len(a_list)))
 	return sum(neutral_bias) / len(neutral_bias)
-
+### CHANGE THIS TO USE NORMALIZER, JUST DefAULTS TO SOFTMAX RIGHT NOW
 def compute_normalized_averageSimilarity_bias(attribute_embeddings, neutral_embeddings, A_list, normalizer, dist, p):
     assert sum(p) == 1 and all(i>=0 for i in p) and all(i<=1 for i in p)
     mean_vectors= [(sum([attribute_embeddings[w] for w in Ai]) / len(Ai)) for Ai in A_list]
