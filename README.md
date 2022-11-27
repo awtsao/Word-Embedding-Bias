@@ -1,5 +1,5 @@
 # BiasQuant
-Methods quantifying bias in word embeddings  
+Methods quantifying bias in word embeddings. This repo contains basic starter code.  
 
 **Word Embedding Data**  
   Word embeddings can be found here:  
